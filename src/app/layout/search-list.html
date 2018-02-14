@@ -1,0 +1,64 @@
+<div class="search-item" ng-repeat="item in vm.items">
+
+  <div class="video-result" ng-if="item.id.kind == 'youtube#video' || item.kind == 'youtube#video'">
+    <a ui-sref="video({id: item.id.videoId})">
+      <div class="video-thumbnail" ng-style="{'background-image': 'url('+ item.snippet.thumbnails.high.url + ')'}">
+      </div>
+    </a>
+    <div class="video-result__info">
+      <a ui-sref="video({id: item.id.videoId})">
+        <div class="video-result__title">{{item.snippet.title}}</div>
+      </a>
+      <a ui-sref="channel({id: item.snippet.channelId})">
+        <div class="video-result__channel">{{item.snippet.channelTitle}}</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="video-result" ng-if="item.id.kind == 'youtube#playlistItem' || item.kind == 'youtube#playlistItem'">
+    <a ui-sref="video({id: item.snippet.resourceId.videoId})">
+      <div class="video-thumbnail" ng-style="{'background-image': 'url('+ item.snippet.thumbnails.high.url + ')'}">
+      </div>
+    </a>
+    <div class="video-result__info">
+      <a ui-sref="video({id: item.snippet.resourceId.videoId})">
+        <div class="video-result__title">{{item.snippet.title}}</div>
+      </a>
+      <a ui-sref="channel({id: item.snippet.channelId})">
+        <div class="video-result__channel">{{item.snippet.channelTitle}}</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="video-result" ng-if="item.id.kind == 'youtube#playlist' || item.kind == 'youtube#playlist'">
+    <a ui-sref="playlist({id: item.id.playlistId})">
+      <div class="video-thumbnail" ng-style="{'background-image': 'url('+ item.snippet.thumbnails.high.url + ')'}">
+        <div class="video-thumbnail__overlay">
+          <div class="video-thumbnail__icon"></div>
+        </div>
+      </div>
+    </a>
+    <div class="video-result__info">
+      <a ui-sref="playlist({id: item.id.playlistId})">
+        <div class="video-result__title">{{item.snippet.title}}</div>
+      </a>
+      <a ui-sref="channel({id: item.snippet.channelId})">
+        <div class="video-result__channel">{{item.snippet.channelTitle}}</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="channel-result" ng-if="item.id.kind == 'youtube#channel' || item.kind == 'youtube#channel'">
+    <a ui-sref="channel({id: item.id.channelId})">
+      <div class="channel-thumbnail" ng-style="{'background-image': 'url(' 
+      + item.snippet.thumbnails.high.url + ')'}">         
+      </div>
+    </a>
+    <div class="channel-result__info">
+      <a ui-sref="channel({id: item.id.channelId})">
+        <div class="channel-result__title">{{item.snippet.title}}</div>
+      </a>  
+    </div>
+  </div>
+
+</div>

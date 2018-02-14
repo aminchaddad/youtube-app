@@ -1,0 +1,33 @@
+/* Do not remove the comments below. It's the markers used by wiredep to inject sass dependencies when defined in the
+bower.json of your dependencies */
+// bower:scss
+// endbower
+
+@import "base.scss"; 
+@import "variables.scss";
+
+
+
+
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 50px;
+  background-color: $background-color;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  padding: 0px 10px;
+  margin: 0 auto;
+}
+
+.white-panel {
+  background-color: #ffffff;
+}
+
+/* Do not remove the comments below. It's the markers used by gulp-inject to inject all your sass files automatically */
+// injector
+// endinjector

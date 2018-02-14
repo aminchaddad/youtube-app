@@ -1,0 +1,21 @@
+# Intellij IDEA
+.idea/dictionaries/
+.idea/libraries/
+.idea/**/tasks.xml
+.idea/**/workspace.xml
+
+# VisualStudioCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
+
+# Installable
+bower_components/
+node_modules/
+
+# Generatable
+.tmp/
+dist/

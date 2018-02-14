@@ -1,0 +1,16 @@
+<div class="filter">
+  <select class="filter__selector" ng-change="vm.getItems()" 
+  ng-model="vm.selectedType">
+    <option value="">All</option>
+    <option value="channel">Channel</option>
+    <option value="playlist">Playlist</option>
+  </select>
+  <select class="filter__selector" ng-change="vm.getItems()" 
+  ng-model="vm.selectedUploadDate">
+    <option value="">All Time</option>
+    <option value="day">Day</option>
+    <option value="week">Week</option>
+    <option value="month">Month</option>
+  </select>
+</div>
+<search-list items="vm.items"></search-list>
