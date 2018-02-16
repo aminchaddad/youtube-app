@@ -16,11 +16,9 @@
     vm.selectedUploadDate = '';
     vm.getItems = getItems;
 
-    activate();
-
     function activate() {  
       return getItems();
-    }
+    }()
 
     function getItems() {
       return videosService.getItems(vm.searchQuery, vm.order, vm.pageToken,
