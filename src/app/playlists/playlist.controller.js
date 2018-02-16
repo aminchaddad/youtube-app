@@ -12,11 +12,9 @@
     vm.id = $state.params.id ;
     vm.getPlaylistItems = getPlaylistItems;
 
-    activate();
-
     function activate() {  
       return getPlaylistItems();
-    }
+    }()
 
     function getPlaylistItems() {
       return playlistsService.getPlaylistItems(vm.id).then(function (data) {

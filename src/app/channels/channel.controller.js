@@ -14,11 +14,9 @@
     vm.getChannel = getChannel;
     vm.getChannelPlaylists = getChannelPlaylists;
 
-    activate();
-
     function activate() {  
       return getChannel() &&  getChannelPlaylists();
-    }
+    }()
 
     function getChannel() {
       return channelsService.getChannel(vm.id).then(function (data) {
