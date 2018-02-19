@@ -4,6 +4,7 @@ var browserSync = require('browser-sync');
 var gulp = require('gulp');
 var path = require('path');
 var util = require('util');
+var historyApiFallback = require('connect-history-api-fallback');
 
 var config = require('./config');
 
@@ -47,6 +48,7 @@ function initBrowsersync(baseDir) {
     server: {
       baseDir: baseDir,
       routes: routes,
+      middleware: [ historyApiFallback() ]
     },
     startPath: '/',
   });
