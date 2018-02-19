@@ -8,7 +8,7 @@
   function routerConfig($stateProvider) {
     $stateProvider.state('video', {
       url: '/video/{id}',
-      component: 'video',
+      component: 'ytVideo',
     });
   }
 

@@ -3,7 +3,7 @@
 
   angular
   .module("app")
-  .component("mainHeader",{
+  .component("ytMainHeader",{
     controller: 'MainHeaderController',
     controllerAs: 'vm',
     templateUrl: 'app/layout/main-header.html'

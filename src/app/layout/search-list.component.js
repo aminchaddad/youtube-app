@@ -3,7 +3,7 @@
 
   angular
   .module("app")
-  .component("searchList",{
+  .component("ytSearchList",{
     templateUrl: 'app/layout/search-list.html',
     bindings: { items: '<' },
     controllerAs: 'vm'

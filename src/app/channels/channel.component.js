@@ -3,7 +3,7 @@
 
   angular
   .module('app')
-  .component('channel', {
+  .component('ytChannel', {
     controller: 'ChannelController',
     controllerAs: 'vm',
     templateUrl: 'app/channels/channel.html',

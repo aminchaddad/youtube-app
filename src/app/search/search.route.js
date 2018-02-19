@@ -8,7 +8,7 @@
   function routerConfig($stateProvider) {
     $stateProvider.state('search', {
       url: '/search?query',
-      component: 'search',
+      component: 'ytSearch',
     });
   }
 

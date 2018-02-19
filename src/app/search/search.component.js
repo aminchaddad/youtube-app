@@ -3,7 +3,7 @@
 
   angular
   .module('app')
-  .component('search', {
+  .component('ytSearch', {
     controller: 'SearchController',
     controllerAs: 'vm',
     templateUrl: 'app/search/search.html',

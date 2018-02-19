@@ -3,7 +3,7 @@
 
   angular
   .module('app')
-  .component('playlist', {
+  .component('ytPlaylist', {
     controller: 'PlaylistController',
     controllerAs: 'vm',
     templateUrl: 'app/playlists/playlist.html',

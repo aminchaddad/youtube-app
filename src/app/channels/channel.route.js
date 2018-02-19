@@ -8,7 +8,7 @@
   function routerConfig($stateProvider) {
     $stateProvider.state('channel', {
       url: '/channel/{id}',
-      component: 'channel',
+      component: 'ytChannel',
     });
   }
 

@@ -8,7 +8,7 @@
   function routerConfig($stateProvider) {
     $stateProvider.state('playlist', {
       url: '/playlist/{id}',
-      component: 'playlist',
+      component: 'ytPlaylist',
     });
   }
 
