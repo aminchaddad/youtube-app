@@ -1,0 +1,48 @@
+/*------------------------------------*\
+  #CHANNEL
+\*------------------------------------*/
+
+.channel-banner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+
+  .channel-details {
+    position: relative;
+    padding: 15px;
+    background-color: $background-color;
+  }
+
+  .channel-details__thumbnail {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    top: -45px;
+  }
+
+  .channel-details__info {
+    margin-left: 80px;
+  }
+
+
+.subscribe {
+  font-size: 0.75rem;
+}
+
+  .subscribe__btn {
+    color: $primary-color;
+  }
+
+  .subscribe__icon {
+    vertical-align: middle;
+    width: 18px;
+  }
+
+  .subscribe__count {
+    color: $secondary-text-color;
+  }

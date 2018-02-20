@@ -7,7 +7,7 @@
   /** @ngInject */
   function routerConfig($stateProvider) {
     $stateProvider.state('channel', {
-      url: '/channel/{id}',
+      url: '/channel/{channelId}',
       component: 'ytChannel',
     });
   }

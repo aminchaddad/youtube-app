@@ -1,1 +1,19 @@
+<div class="channel-banner" ng-style="{'background-image': 'url('+ vm.channel.brandingSettings.image.bannerImageUrl + ')'}">
+</div>
+<div class="channel-details">
+  <div class="channel-details__thumbnail" ng-style="{'background-image': 'url(' 
+  + vm.channel.snippet.thumbnails.high.url + ')'}">         
+  </div>
+  <div class="channel-details__info">
+    <h2 class="main-title">{{vm.channel.snippet.title}}</h2>
+    <div class="subscribe">
+      <a class="subscribe__btn">
+        <img class="subscribe__icon" 
+        src="/assets/img/subscribe-icon.png" alt="">
+        SUBSCRIBE
+      </a>
+      <span class="subscribe__count">{{vm.channel.statistics.subscriberCount}}</span>
+    </div>
+  </div>
+</div>
 <yt-search-list items="vm.playlists"></yt-search-list>

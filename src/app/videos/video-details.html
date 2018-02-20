@@ -6,7 +6,9 @@
 <div class="video-details">
   <h2 class="main-title">{{vm.video.snippet.title}}</h2>
   <div>
-    <span class="video-details__channel">{{vm.video.snippet.channelTitle}}</span>
+    <a class="video-details__channel" ui-sref="channel({channelId: vm.video.snippet.channelId})">
+      {{vm.video.snippet.channelTitle}}
+    </a>
     <span class="video-details__statis">{{vm.video.statistics.viewCount}} views</span>
   </div>
   <div class="video-details__icon-row">

@@ -16,8 +16,8 @@
     return service;
 
     function getChannel(id) {
-      var queryParams = '?key=' + API_KEY + '&part=snippet,contentDetails' + 
-      '&id=' + id;
+      var queryParams = '?key=' + API_KEY + 
+      '&part=snippet,contentDetails,statistics,brandingSettings&id=' + id;
 
       return $http.get(API_ROOT + '/channels' + queryParams)
         .then(getChannelComplete)

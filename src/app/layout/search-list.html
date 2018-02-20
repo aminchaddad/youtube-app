@@ -9,7 +9,7 @@
       <a ui-sref="video.details({videoId: item.id.videoId})">
         <div class="video-result__title">{{item.snippet.title}}</div>
       </a>
-      <a ui-sref="channel({id: item.snippet.channelId})">
+      <a ui-sref="channel({channelId: item.snippet.channelId})">
         <div class="video-result__channel">{{item.snippet.channelTitle}}</div>
       </a>
     </div>
@@ -24,14 +24,14 @@
       <a ui-sref="playlist.video({videoId: item.snippet.resourceId.videoId})">
         <div class="video-result__title">{{item.snippet.title}}</div>
       </a>
-      <a ui-sref="channel({id: item.snippet.channelId})">
+      <a ui-sref="channel({channelId: item.snippet.channelId})">
         <div class="video-result__channel">{{item.snippet.channelTitle}}</div>
       </a>
     </div>
   </div>
 
   <div class="video-result" ng-if="item.id.kind == 'youtube#playlist' || item.kind == 'youtube#playlist'">
-    <a ui-sref="playlist({playlistId: item.id.playlistId})">
+    <a ui-sref="playlist({playlistId: item.id.playlistId?item.id.playlistId:item.id})">
       <div class="video-thumbnail" ng-style="{'background-image': 'url('+ item.snippet.thumbnails.high.url + ')'}">
         <div class="video-thumbnail__overlay">
           <div class="video-thumbnail__icon"></div>
@@ -42,20 +42,20 @@
       <a ui-sref="playlist({playlistId: item.id.playlistId})">
         <div class="video-result__title">{{item.snippet.title}}</div>
       </a>
-      <a ui-sref="channel({id: item.snippet.channelId})">
+      <a ui-sref="channel({channelId: item.snippet.channelId})">
         <div class="video-result__channel">{{item.snippet.channelTitle}}</div>
       </a>
     </div>
   </div>
 
   <div class="channel-result" ng-if="item.id.kind == 'youtube#channel' || item.kind == 'youtube#channel'">
-    <a ui-sref="channel({id: item.id.channelId})">
+    <a ui-sref="channel({channelId: item.id.channelId})">
       <div class="channel-thumbnail" ng-style="{'background-image': 'url(' 
       + item.snippet.thumbnails.high.url + ')'}">         
       </div>
     </a>
     <div class="channel-result__info">
-      <a ui-sref="channel({id: item.id.channelId})">
+      <a ui-sref="channel({channelId: item.id.channelId})">
         <div class="channel-result__title">{{item.snippet.title}}</div>
       </a>  
     </div>
