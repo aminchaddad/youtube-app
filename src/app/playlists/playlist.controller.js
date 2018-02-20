@@ -23,7 +23,7 @@
         .then(function (data) {
         vm.playlistItems = data?data.items:[];
         if (!vm.videoId && vm.playlistItems.length > 0) {
-          $state.go('playlistVideo',{
+          $state.go('playlist.video',{
             playlistId: vm.playlistId, 
             videoId: vm.playlistItems[0].snippet.resourceId.videoId
           });

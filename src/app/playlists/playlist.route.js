@@ -11,9 +11,9 @@
       component: 'ytPlaylist',
     });
 
-    $stateProvider.state('playlistVideo', {
-      url: '/playlist/{playlistId}/video/{videoId}',
-      component: 'ytPlaylist',
+    $stateProvider.state('playlist.video', {
+      url: '/video/{videoId}',
+      component: 'ytVideoDetails',
     });
   }
 

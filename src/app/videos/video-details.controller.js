@@ -6,14 +6,12 @@
     .controller('VideoDetailsController', VideoDetailsController);
 
   /* @ngInject */
-  function VideoDetailsController(videosService) {
+  function VideoDetailsController($state,videosService) {
     var vm = this;
     vm.video = {};
-    vm.$onInit= onInit;
-
-    function onInit(){
-      activate();
-    }
+    vm.videoId = $state.params.videoId;
+    
+    activate();
 
     function activate() {  
       return getVideo();
