@@ -1,6 +1,2 @@
-<div class="yt-player">  
-  <iframe id="ytplayer" type="text/html" width="100%" height="250" 
-  ng-src="{{('https://www.youtube.com/embed/' + vm.id + '?autoplay=1&controls=1') | trusted}}" allowfullscreen>
-  </iframe>
-</div>
+<yt-video-details video-id="vm.videoId"></yt-video-details>
 <yt-search-list items="vm.relatedVideos"></yt-search-list>

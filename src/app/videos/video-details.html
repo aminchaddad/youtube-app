@@ -1,0 +1,22 @@
+<div class="yt-player"> 
+  <iframe id="ytplayer" type="text/html" width="100%" height="100%" 
+  ng-src="{{('https://www.youtube.com/embed/' + vm.videoId + '?autoplay=1&controls=1') | trusted}}" allowfullscreen>
+  </iframe>
+</div>
+<div class="video-details">
+  <h2 class="main-title">{{vm.video.snippet.title}}</h2>
+  <div>
+    <span class="video-details__channel">{{vm.video.snippet.channelTitle}}</span>
+    <span class="video-details__statis">{{vm.video.statistics.viewCount}} views</span>
+  </div>
+  <div class="video-details__icon-row">
+    <span class="video-details__statis">
+      <img class="video-details__icon" src="/assets/img/like-icon.png">
+      {{vm.video.statistics.likeCount}}
+    </span>
+    <span class="video-details__statis">
+      <img class="video-details__icon" src="/assets/img/dislike-icon.png"> 
+      {{vm.video.statistics.dislikeCount}}
+    </span>
+  </div>
+</div>

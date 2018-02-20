@@ -45,8 +45,8 @@
     }
 
     function getVideo(id) {
-      var queryParams = '?key=' + API_KEY + '&part=snippet,contentDetails' + 
-      '&id=' + id;
+      var queryParams = '?key=' + API_KEY + 
+      '&part=snippet,contentDetails,statistics' + '&id=' + id;
 
       return $http.get(API_ROOT + '/videos' + queryParams)
         .then(getVideoComplete)

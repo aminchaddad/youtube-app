@@ -7,7 +7,7 @@
   /** @ngInject */
   function routerConfig($stateProvider) {
     $stateProvider.state('video', {
-      url: '/video/{id}',
+      url: '/video/{videoId}',
       component: 'ytVideo',
     });
   }

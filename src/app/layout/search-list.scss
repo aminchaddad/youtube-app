@@ -30,13 +30,13 @@
   .video-result__title {
     max-height: 75px;
     overflow: hidden;
-    color: $primary-text;
+    color: $primary-text-color;
   }
 
   .video-result__channel {
     max-height: 45px;
     overflow: hidden;
-    color: $secondary-text;
+    color: $secondary-text-color;
     font-size: 0.75rem;
   }
 
@@ -100,7 +100,7 @@
   .channel-result__title {
     max-height: 75px;
     overflow: hidden;
-    color: $primary-text;
+    color: $primary-text-color;
   }
 
 .channel-thumbnail {

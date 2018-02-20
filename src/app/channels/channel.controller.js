@@ -10,14 +10,13 @@
     var vm = this;
     vm.playlists = [];
     vm.channel = {};
-    vm.id = $state.params.id ;
-    vm.getChannel = getChannel;
-    vm.getChannelPlaylists = getChannelPlaylists;
+    vm.id = $state.params.id;
 
     activate();
 
     function activate() {  
-      return getChannel() &&  getChannelPlaylists();
+      var promises = [getChannel(), getChannelPlaylists()]; 
+      return promises;
     }
 
     function getChannel() {
