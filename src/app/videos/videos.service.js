@@ -19,6 +19,9 @@
     function getItems(query, order, pageToken , type, uploadDate) {
       var today = new Date();
       var range = 0;
+      if (uploadDate == 'hour') {
+        range = 3600000;
+      }
       if (uploadDate == 'day') {
         range = 86400000;
       }

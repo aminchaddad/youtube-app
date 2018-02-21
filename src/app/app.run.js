@@ -4,8 +4,13 @@
   angular.module('app').run(runBlock);
 
   /** @ngInject */
-  function runBlock($state, $stateParams) {
-    
+  function runBlock($rootScope) {
+    $rootScope.mobileDevice = detectMobile()
+
+    function detectMobile() {
+      return (/android|webos|iphone|ipad|ipod|blackberry|windows phone/)
+      .test(navigator.userAgent.toLowerCase())
+    } 
   }
 
 })();

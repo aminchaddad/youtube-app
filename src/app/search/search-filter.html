@@ -1,0 +1,138 @@
+<div class="filter filter--mobile">
+  <select class="filter__selector" ng-model="vm.type"
+  ng-change="vm.triggerChange()">
+    <option value="">All</option>
+    <option value="channel">Channel</option>
+    <option value="playlist">Playlist</option>
+  </select>
+  <select class="filter__selector" ng-model="vm.uploadDate"
+  ng-change="vm.triggerChange()">
+    <option value="">All Time</option>
+    <option value="day">Day</option>
+    <option value="week">Week</option>
+    <option value="month">Month</option>
+  </select>
+</div>
+<div class="filter filter--desktop">
+  <div class="filter__header">
+    <span class="filter__result-count">About 
+      {{vm.resultCount.toLocaleString('en', {useGrouping:true})}} results</span>
+    <a class="filter__toggle" 
+    ng-click="vm.filterCollapsed = !vm.filterCollapsed">
+      <img class="filter__icon" src="/assets/img/filter-icon.png" alt="">
+      FILTER
+    </a>
+    <div class="filter__grid" 
+    ng-class="{'filter__grid--collapsed': vm.filterCollapsed}">
+      <div class="filter__col">
+        <div class="filter__type">
+          UPLOAD DATE
+        </div>
+        <div class="filter-item"
+         ng-class="{'filter-item--selected': vm.uploadDate == 'hour'}">
+          <a class="filter-item__option" ng-click="vm.setUploadDate('hour')">
+            Last hour
+          </a>
+          <a class="filter-item__remove" ng-if="vm.uploadDate == 'hour'"
+          ng-click="vm.setUploadDate('')">
+            x
+          </a>
+        </div>
+        <div class="filter-item"
+        ng-class="{'filter-item--selected': vm.uploadDate == 'day'}">
+         <a class="filter-item__option" ng-click="vm.setUploadDate('day')">
+           Today
+         </a>
+         <a class="filter-item__remove" ng-if="vm.uploadDate == 'day'"
+         ng-click="vm.setUploadDate('')">
+           x
+         </a>
+        </div>
+        <div class="filter-item"
+        ng-class="{'filter-item--selected': vm.uploadDate == 'week'}">
+         <a class="filter-item__option" ng-click="vm.setUploadDate('week')">
+           This week
+         </a>
+         <a class="filter-item__remove" ng-if="vm.uploadDate == 'week'"
+         ng-click="vm.setUploadDate('')">
+           x
+         </a>
+        </div>
+        <div class="filter-item"
+        ng-class="{'filter-item--selected': vm.uploadDate == 'month'}">
+         <a class="filter-item__option" ng-click="vm.setUploadDate('month')">
+           This month
+         </a>
+         <a class="filter-item__remove" ng-if="vm.uploadDate == 'month'"
+         ng-click="vm.setUploadDate('')">
+           x
+         </a>
+        </div>
+      </div>
+      <div class="filter__col">
+        <div class="filter__type">
+          TYPE
+        </div>
+        <div class="filter-item"
+          ng-class="{'filter-item--selected': vm.type == 'video'}">
+          <a class="filter-item__option" ng-click="vm.setType('video')">
+            Video
+          </a>
+          <a class="filter-item__remove" ng-if="vm.type == 'video'"
+          ng-click="vm.setType('')">
+            x
+          </a>
+        </div>
+        <div class="filter-item"
+        ng-class="{'filter-item--selected': vm.type == 'channel'}">
+          <a class="filter-item__option" ng-click="vm.setType('channel')">
+            Channel
+          </a>
+          <a class="filter-item__remove" ng-if="vm.type == 'channel'"
+          ng-click="vm.setType('')">
+            x
+          </a>
+        </div>
+        <div class="filter-item"
+        ng-class="{'filter-item--selected': vm.type == 'playlist'}">
+          <a class="filter-item__option" ng-click="vm.setType('playlist')">
+            Playlist
+          </a>
+          <a class="filter-item__remove" ng-if="vm.type == 'playlist'"
+          ng-click="vm.setType('')">
+            x
+          </a>
+        </div>
+      </div>
+      <div class="filter__col">
+        <div class="filter__type">
+          SORT BY
+        </div>
+        <div class="filter-item"
+          ng-class="{'filter-item--selected': vm.order == 'relevance'}">
+          <a class="filter-item__option" ng-click="vm.setOrder('relevance')">
+            Relevance
+          </a>
+        </div>
+        <div class="filter-item"
+        ng-class="{'filter-item--selected': vm.order == 'date'}">
+          <a class="filter-item__option" ng-click="vm.setOrder('date')">
+            Upload date
+          </a>
+        </div>
+        <div class="filter-item"
+        ng-class="{'filter-item--selected': vm.order == 'viewCount'}">
+          <a class="filter-item__option" ng-click="vm.setOrder('viewCount')">
+            View count
+          </a>
+        </div>
+        <div class="filter-item"
+        ng-class="{'filter-item--selected': vm.order == 'rating'}">
+          <a class="filter-item__option" ng-click="vm.setOrder('rating')">
+            Rating
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

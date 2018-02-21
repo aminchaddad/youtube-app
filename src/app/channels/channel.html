@@ -12,7 +12,9 @@
         src="/assets/img/subscribe-icon.png" alt="">
         SUBSCRIBE
       </a>
-      <span class="subscribe__count">{{vm.channel.statistics.subscriberCount}}</span>
+      <span class="subscribe__count">
+        {{(vm.channel.statistics.subscriberCount-0).toLocaleString('en', {useGrouping:true})}}
+      </span>
     </div>
   </div>
 </div>

@@ -6,19 +6,23 @@
 <div class="video-details">
   <h2 class="main-title">{{vm.video.snippet.title}}</h2>
   <div>
-    <a class="video-details__channel" ui-sref="channel({channelId: vm.video.snippet.channelId})">
+    <a class="video-details__channel" 
+    ui-sref="channel({channelId: vm.video.snippet.channelId})">
       {{vm.video.snippet.channelTitle}}
     </a>
-    <span class="video-details__statis">{{vm.video.statistics.viewCount}} views</span>
+    <span class="video-details__statis">
+      {{(vm.video.statistics.viewCount-0).toLocaleString('en', {useGrouping:true})}}
+      views
+    </span>
   </div>
   <div class="video-details__icon-row">
     <span class="video-details__statis">
       <img class="video-details__icon" src="/assets/img/like-icon.png">
-      {{vm.video.statistics.likeCount}}
+      {{(vm.video.statistics.likeCount-0).toLocaleString('en', {useGrouping:true})}}
     </span>
     <span class="video-details__statis">
       <img class="video-details__icon" src="/assets/img/dislike-icon.png"> 
-      {{vm.video.statistics.dislikeCount}}
+      {{(vm.video.statistics.dislikeCount-0).toLocaleString('en', {useGrouping:true})}}
     </span>
   </div>
 </div>

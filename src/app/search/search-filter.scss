@@ -1,0 +1,103 @@
+/*------------------------------------*\
+  #SEARCH-FILTER
+\*------------------------------------*/
+
+.filter {
+  padding: 10px;
+  border-bottom: 1px solid $seperator-color;
+}
+
+  .filter__selector {
+    border-radius: 2px;
+    padding: 6px 3px;
+    font-size: 14px;
+    background-color: $background-color;
+  }
+
+  .filter__toggle {
+    float: right;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .filter__icon {
+    vertical-align: middle;
+    width: 18px;
+  }
+
+  .filter__grid {
+    margin-right: -10px;
+    margin-left: -10px;
+    padding-top: 20px;
+    height: 250px;
+    overflow: hidden;
+    @include transition(height .2s ease-in);
+
+    &:after {
+      content: '';
+      clear: both;
+      display: block;
+    }
+  }
+
+  
+  .filter__grid--collapsed {
+    height: 0;
+  }
+
+  .filter__col {
+    float: left;
+    width: 33.3%;
+    padding: 0px 10px;
+  }
+
+  .filter__type {
+    font-weight: bold;
+    font-size: 0.875rem;
+    padding-bottom: 10px;
+    color: $primary-text-color;
+    border-bottom: 1px solid $seperator-color;
+  }
+
+
+.filter--mobile {
+  display: block;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.filter--desktop {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}
+
+
+
+
+
+.filter-item {
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: $secondary-text-color;
+  cursor: pointer;
+}
+
+  .filter-item__option {
+    margin-right: 5px;
+  }
+
+  .filter-item__remove {
+    font-weight: normal;
+  }
+
+
+.filter-item--selected {
+  font-weight: bold;
+  color: $primary-text-color;
+}
+

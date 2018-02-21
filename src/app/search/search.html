@@ -1,16 +1,6 @@
-<div class="filter">
-  <select class="filter__selector" ng-change="vm.getItems()" 
-  ng-model="vm.selectedType">
-    <option value="">All</option>
-    <option value="channel">Channel</option>
-    <option value="playlist">Playlist</option>
-  </select>
-  <select class="filter__selector" ng-change="vm.getItems()" 
-  ng-model="vm.selectedUploadDate">
-    <option value="">All Time</option>
-    <option value="day">Day</option>
-    <option value="week">Week</option>
-    <option value="month">Month</option>
-  </select>
-</div>
-<yt-search-list items="vm.items"></yt-search-list>
+<yt-loader is-loading="vm.loading"></yt-loader>
+<yt-search-filter type="vm.type" upload-date="vm.uploadDate" 
+order="vm.order" result-count="vm.resultCount" 
+on-change="vm.getItems()" ng-hide="vm.loading"></yt-search-filter>
+<yt-search-list items="vm.items" ng-hide="vm.loading"></yt-search-list>
+<yt-infinite-scroll load-page="vm.nextPage()" loading="vm.pageLoading" have-more="vm.pageToken"></yt-infinite-scroll>

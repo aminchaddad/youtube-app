@@ -5,8 +5,9 @@
 .channel-banner {
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
-  padding-bottom: 56.25%;
+  padding-bottom: 16.4%;
 }
 
   .channel-details {
@@ -18,15 +19,16 @@
   .channel-details__thumbnail {
     background-size: cover;
     background-repeat: no-repeat;
-    width: 80px;
-    height: 80px;
+    background-position: center;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     position: absolute;
-    top: -45px;
+    top: -30px;
   }
 
   .channel-details__info {
-    margin-left: 80px;
+    margin-left: 60px;
   }
 
 

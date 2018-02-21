@@ -1,0 +1,30 @@
+/*------------------------------------*\
+  #LOADER
+\*------------------------------------*/
+
+.loader {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: $background-color;
+  padding-top: 100px;
+}
+  .loader__block {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .loader__icon {
+    display: block;
+    margin: 0 auto;
+    width: 35px;
+    margin-bottom: 15px;
+  }
+
+  .loader__text {
+    font-size: 0.875rem;
+    color: $secondary-text-color;
+  }

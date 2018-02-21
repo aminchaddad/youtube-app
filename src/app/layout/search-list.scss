@@ -12,42 +12,62 @@
 
 .video-result {
   width: 100%;
-
-  &:after {
-    content: '';
-    clear: both;
-    display: block;
-  }
-
+  position: relative;
 }
 
   .video-result__info {
-    float: left;
-    width: 50%;
     padding: 0px 10px;
+    height: 90px;
+    margin-left: 160px;
+
+    @include desktop {
+      height: 180px;
+      margin-left: 320px;
+    }
   }
 
   .video-result__title {
-    max-height: 75px;
+    max-height: 50px;
     overflow: hidden;
     color: $primary-text-color;
   }
 
   .video-result__channel {
-    max-height: 45px;
+    max-height: 40px;
     overflow: hidden;
     color: $secondary-text-color;
     font-size: 0.75rem;
   }
 
+  .video-result__description {
+    max-height: 80px;
+    overflow: hidden;
+    color: $secondary-text-color;
+    font-size: 0.75rem;
+    margin-top: 10px;
+    display: none;
+    
+    @include desktop {
+      display: block;
+    }
+  }
+
+
+
+
 
 .video-thumbnail {
-  float: left;
-  width: 50%;
+  width: 160px;
   background-size: cover;
   background-repeat: no-repeat;
-  position: relative;
-  height: 120px;
+  background-position: center;
+  position: absolute;
+  height: 90px;
+
+  @include desktop {
+    height: 180px;
+    width: 320px;
+  }
 }
 
   .video-thumbnail__overlay {
@@ -78,7 +98,7 @@
 .channel-result {
   width: 100%;
   position: relative;
-  min-height: 100px;
+  min-height: 90px;
 
   &:after {
     content: '';
@@ -86,15 +106,23 @@
     display: block;
   }
 
+  @include desktop {
+    min-height: 180px;
+  }
+
 }
 
   .channel-result__info {
-    float: left;
-    padding: 0px 10px 0px 110px;
+    padding: 0px 10px;
+    margin-left: 90px;
     vertical-align: middle;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+
+    @include desktop {
+      margin-left: 180px;
+    }
   }
 
   .channel-result__title {
@@ -103,20 +131,34 @@
     color: $primary-text-color;
   }
 
+  .channel-result__description {
+    max-height: 95px;
+    overflow: hidden;
+    color: $secondary-text-color;
+    font-size: 0.75rem;
+    margin-top: 10px;
+    display: none;
+    
+    @include desktop {
+      display: block;
+    }
+  }
+
+
+
+
+
 .channel-thumbnail {
-  float: left;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100px;
-  height: 100px;
+  background-position: center;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   position: absolute;
+
+  @include desktop {
+    height: 180px;
+    width: 180px;
+  }
 }
-
-
-
-
-
-
-
-

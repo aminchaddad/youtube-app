@@ -3,8 +3,6 @@
 
   angular
     .module('app', [
-      'pascalprecht.translate',
-      'tmh.dynamicLocale',
       'ui.router'
   ]);
 
