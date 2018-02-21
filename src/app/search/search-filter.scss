@@ -22,7 +22,7 @@
 
   .filter__icon {
     vertical-align: middle;
-    width: 18px;
+    width: 24px;
   }
 
   .filter__grid {
@@ -31,7 +31,7 @@
     padding-top: 20px;
     height: 250px;
     overflow: hidden;
-    @include transition(height .2s ease-in);
+    @include transition(height .2s ease-in,padding .2s ease-in);
 
     &:after {
       content: '';
@@ -43,6 +43,7 @@
   
   .filter__grid--collapsed {
     height: 0;
+    padding: 0;
   }
 
   .filter__col {
@@ -58,23 +59,6 @@
     color: $primary-text-color;
     border-bottom: 1px solid $seperator-color;
   }
-
-
-.filter--mobile {
-  display: block;
-
-  @include desktop {
-    display: none;
-  }
-}
-
-.filter--desktop {
-  display: none;
-
-  @include desktop {
-    display: block;
-  }
-}
 
 
 

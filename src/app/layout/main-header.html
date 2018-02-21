@@ -1,13 +1,21 @@
-<nav class="main-header">
+<nav class="main-header" ng-class="{'main-header--fixed': !$root.mobileDevice}">
   <div class="container">
+    <a ui-sref="search">
+      <div class="logo" ng-class="{'logo--full': !$root.mobileDevice}">
+      </div>
+    </a>
 
-    <div class="logo">
-    </div>
-
-    <div class="search-form">
+    <div class="search-form" ng-class="{'search-form--light': 
+    !$root.mobileDevice}">
       <input type="text" class="search-form__input" ng-model="vm.searchQuery" 
-      ng-keypress="vm.onKeyPress($event)"/>
-      <button type="button" class="search-form__btn" >
+      ng-keypress="vm.onKeyPress($event)" ng-if="!$root.mobileDevice  ||
+      vm.showTextInput"/>
+      <h2 class="search-form__text" ng-if="$root.mobileDevice &&
+      !vm.showTextInput">
+        {{vm.searchQuery?vm.searchQuery:'Youtube'}}
+      </h2>
+      <button type="button" class="search-form__btn" 
+      ng-click="vm.onButtonClick()">
         <div class="search-form__icon">
       </button>
     </div>

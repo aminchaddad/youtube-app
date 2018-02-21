@@ -1,8 +1,10 @@
 <img class="loader__icon" src="/assets/img/loader.gif" alt="" 
 ng-if="!$root.mobileDevice && loading">
-<div class="infinite-scroll__btn" ng-If="$root.mobileDevice">
-  <a ng-click="loadPage()" ng-if="!loading">
-    Show more items
-  </a>
-  <img class="loader__icon" src="/assets/img/loader.gif" alt="" ng-if="loading">
-</div>
+<a ng-click="loadPage()" ng-If="$root.mobileDevice">
+  <div class="infinite-scroll__btn">
+    <span ng-click="loadPage()" ng-if="!loading">
+      Show more items
+    </span>
+    <img class="loader__icon" src="/assets/img/loader.gif" alt="" ng-if="loading">
+  </div>
+</a>

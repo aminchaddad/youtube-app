@@ -1,4 +1,4 @@
-<div class="filter filter--mobile">
+<div class="filter" ng-if="$root.mobileDevice">
   <select class="filter__selector" ng-model="vm.type"
   ng-change="vm.triggerChange()">
     <option value="">All</option>
@@ -13,7 +13,7 @@
     <option value="month">Month</option>
   </select>
 </div>
-<div class="filter filter--desktop">
+<div class="filter" ng-if="!$root.mobileDevice">
   <div class="filter__header">
     <span class="filter__result-count">About 
       {{vm.resultCount.toLocaleString('en', {useGrouping:true})}} results</span>
