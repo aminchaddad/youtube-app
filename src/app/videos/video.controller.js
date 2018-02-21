@@ -10,8 +10,12 @@
     var vm = this;
     vm.relatedVideos = [];
     vm.videoId = $state.params.videoId;
+    vm.getRelatedVideos = getRelatedVideos;
+    vm.$onInit = onInit;
 
-    activate();
+    function onInit() {
+      activate();
+    }
 
     function activate() { 
       return getRelatedVideos();

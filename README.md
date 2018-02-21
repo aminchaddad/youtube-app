@@ -22,7 +22,7 @@ cd youtube-app
 npm install
 ```
 
-Now to run the app you run this command:
+Now to run the app:
 
 ```
 npm start
@@ -33,4 +33,8 @@ Your default browser will be launched at `http://localhost:3000` serving your pr
 
 ### Tests
 
-There is no tests in ths project.
+To run tests:
+
+```
+karma start
+```

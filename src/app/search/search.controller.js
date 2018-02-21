@@ -19,8 +19,11 @@
     vm.resultCount = 0;
     vm.getItems = getItems;
     vm.nextPage = nextPage;
-
-    activate();
+    vm.$onInit = onInit;
+    
+    function onInit() {
+      activate();
+    }
 
     function activate() {  
       return getItems();

@@ -11,8 +11,13 @@
     vm.playlists = [];
     vm.channel = {};
     vm.channelId = $state.params.channelId;
-
-    activate();
+    vm.getChannel = getChannel;
+    vm.getChannelPlaylists = getChannelPlaylists;
+    vm.$onInit = onInit;
+    
+    function onInit() {
+      activate();
+    }
 
     function activate() {  
       var promises = [getChannel(), getChannelPlaylists()]; 

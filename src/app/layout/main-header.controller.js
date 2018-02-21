@@ -12,6 +12,11 @@
     vm.searchQuery = $state.params.query?$state.params.query:'';
     vm.onKeyPress = onKeyPress;
     vm.onButtonClick = onButtonClick;
+    vm.$onInit = onInit;
+    
+    function onInit() {
+
+    }
     
     function onKeyPress(event) {
       if (event.which === 13) {

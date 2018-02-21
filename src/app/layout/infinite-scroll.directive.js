@@ -19,7 +19,7 @@
     };
     return directive;
 
-    function link(scope, element, attrs) {
+    function link(scope, element) {
       if (!$rootScope.mobileDevice) {
         var raw = element[0];
         $document.bind('scroll', function () {

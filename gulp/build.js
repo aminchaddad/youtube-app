@@ -32,7 +32,7 @@ gulp.task('build-app', ['inject', 'partials'], function() {
 
   var excludeSourceMapsFilter = $.filter(['**', '!**/*.map'], filterOptions);
   var htmlFilter = $.filter('**/*.html', filterOptions);
-  var scriptsFilter = $.filter('**/*.js', filterOptions);
+  var scriptsFilter = $.filter(['**/*.js', '!**/*.spec.js'], filterOptions);
   var stylesFilter = $.filter('**/*.css', filterOptions);
 
   return gulp.src(path.join(config.paths.tmp, '/serve/*.html')).

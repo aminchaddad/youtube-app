@@ -7,7 +7,7 @@ var path = require('path');
 
 var config = require('./config');
 
-var scriptsPath = path.join(config.paths.src, '/app/**/*.js');
+var scriptsPath = [path.join(config.paths.src, '/app/**/*.js'),('!'+path.join(config.paths.src, '/app/**/*.spec.js'))];
 
 /**
  * Build scripts.

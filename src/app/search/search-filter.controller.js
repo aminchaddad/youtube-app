@@ -13,6 +13,11 @@
     vm.setUploadDate = setUploadDate;
     vm.setType = setType;
     vm.setOrder = setOrder;
+    vm.$onInit = onInit;
+    
+    function onInit() {
+      
+    }
 
     function triggerChange() {
       $timeout(function () {

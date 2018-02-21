@@ -16,7 +16,7 @@ var destPath = path.join(config.paths.tmp, '/serve');
  * @gulptask inject
  */
 gulp.task('inject', ['scripts', 'styles'], function() {
-  var injectScripts = gulp.src(path.join(config.paths.src, '/app/**/*.js')).
+  var injectScripts = gulp.src([path.join(config.paths.src, '/app/**/*.js'),('!'+path.join(config.paths.src, '/app/**/*.spec.js'))]).
     pipe($.angularFilesort()).
     on('error', config.errorHandler('Angular Filesort'));
 

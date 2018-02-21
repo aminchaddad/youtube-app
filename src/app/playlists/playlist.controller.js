@@ -10,9 +10,13 @@
     var vm = this;
     vm.playlistItems = [];
     vm.playlistId = $state.params.playlistId;
-    vm.videoId = $state.params.videoId ;
-
-    activate();
+    vm.videoId = $state.params.videoId;
+    vm.getPlaylistItems = getPlaylistItems;
+    vm.$onInit = onInit;
+    
+    function onInit() {
+      activate();
+    }
 
     function activate() {  
       return getPlaylistItems();
